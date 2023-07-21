@@ -62,6 +62,9 @@ GOOS=windows go build
 ```bash
 # UUID
 go get github.com/google/uuid
+
+# Crypto
+go get golang.org/x/crypto
 ```
 
 ## Ferramentas úteis
