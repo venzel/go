@@ -4,9 +4,10 @@ Repositório destinado ao Go.
 
 ## Projetos
 
--   [Go ViaCEP](https://github.com/venzel/go-viacep)
--   [Go Clean Architecture Básico](https://github.com/venzel/go-clean-architecture-basic)
--   [Go Agoritimos](https://github.com/venzel/go-algo)
+-   [Go ViaCEP](./go-viacep/)
+-   [Go Clean Architecture Básico](./go-clean-architecture-basic/)
+-   [Go Agoritimos](./go-algo/)
+-   [Go Encoder](./go-encoder/)
 
 ## Download, instalação e configuração
 
