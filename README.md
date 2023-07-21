@@ -5,6 +5,8 @@ Repositório destinado ao Go.
 ## Projetos
 
 -   [Go ViaCEP](https://github.com/venzel/go-viacep)
+-   [Go Clean Architecture Básico](https://github.com/venzel/go-clean-architecture-basic)
+-   [Go Agoritimos](https://github.com/venzel/go-algo)
 
 ## Download, instalação e configuração
 
@@ -62,13 +64,18 @@ GOOS=windows go build
 go get github.com/google/uuid
 ```
 
-## Links
+## Ferramentas úteis
 
 -   [Converte JSON to struct](https://mholt.github.io/json-to-go/)
 
 ## Apis externas
 
 -   [ViaCEP](https://viacep.com.br/)
+
+## Forks de terceiros
+
+-   [Go concorrência](https://github.com/venzel/concorrencia-go)
+-   [60 dias com Go](https://github.com/venzel/60-days-of-go)
 
 <hr>
 
