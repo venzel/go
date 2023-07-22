@@ -51,6 +51,9 @@ go mod init <nome_do_modulo>
 # Baixa as dependências de um projeto
 go mod tidy
 
+# Salva as dependências localmente
+go mod vendor
+
 # Cria o build da aplicação de acordo com a variável GOOS do go env
 go build
 
