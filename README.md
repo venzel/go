@@ -6,7 +6,7 @@ Repositório destinado ao Go.
 
 -   [Go ViaCEP](./go-viacep/)
 -   [Go Clean Architecture Básico](./go-clean-architecture-basic/)
--   [Go Agoritimos](./go-algo/)
+-   [Go Agoritimos](./go-algorithms/)
 -   [Go Encoder](./go-encoder/)
 
 ## Download, instalação e configuração
