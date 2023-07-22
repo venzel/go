@@ -4,10 +4,13 @@ Repositório destinado ao Go.
 
 ## Projetos
 
--   [Go ViaCEP](./go-viacep/)
--   [Go Clean Architecture Básico](./go-clean-architecture-basic/)
--   [Go Agoritimos](./go-algorithms/)
--   [Go Encoder](./go-encoder/)
+-   [Go ViaCEP](./projetcs/go-viacep/)
+-   [Go clean architecture basic](./projetcs/go-clean-architecture-basic/)
+-   [Go agorithms](./projetcs/go-algorithms/)
+-   [Go encoder](./projetcs/go-encoder/)
+-   [Go access modifiers](./projetcs/go-access-modiers/)
+-   [Go configs dot env](./projetcs/go-configs-dot-env/)
+-   [Go database](./projetcs/go-database/)
 
 ## Download, instalação e configuração
 
@@ -69,6 +72,12 @@ go get github.com/google/uuid
 
 # Crypto
 go get golang.org/x/crypto
+
+# Viper: variáveis de ambientes
+go get github.com/spf13/viper
+
+# SQLite
+go get github.com/jinzhu/gorm/dialects/sqlite
 ```
 
 ## Ferramentas úteis
@@ -79,7 +88,7 @@ go get golang.org/x/crypto
 
 -   [ViaCEP](https://viacep.com.br/)
 
-## Forks de terceiros
+## Forks
 
 -   [Go concorrência](https://github.com/venzel/concorrencia-go)
 -   [60 dias com Go](https://github.com/venzel/60-days-of-go)

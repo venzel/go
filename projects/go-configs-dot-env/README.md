@@ -1,9 +1,10 @@
-# API WEB
+# Go configs
 
-## Packages
+## Pacotes
 
 ```bash
-go get golang.org/x/crypto
+# Viper
+go get github.com/spf13/viper
 ```
 
 <hr />

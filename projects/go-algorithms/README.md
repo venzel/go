@@ -1,4 +1,4 @@
-# Go Algoritimos
+# Go Algorithms
 
 <div>
   <img align="left" src="https://imgur.com/k8HFd0F.png" width=35 alt="Profile"/>
