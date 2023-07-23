@@ -1,11 +1,20 @@
 package main
 
-import "injections/entity"
+import (
+	"database/sql"
+	"injections/product"
+)
 
 func main() {
-	productRepository := entity.NewProductRepository(nil)
+	db, err := sql.Open("mysql", "root:root@tcp(localhost:3306)/orders")
 
-	productService := entity.NewProductService(productRepository)
+	if err != nil {
+		panic(err)
+	}
 
-	productService.Create("Tiago", 20)
+	repository := product.NewProductRepository(db)
+
+	usecase := product.NewProductUseCase(repository)
+
+	usecase.Create("Tiago", 20)
 }
