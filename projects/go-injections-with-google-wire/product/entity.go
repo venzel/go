@@ -21,6 +21,6 @@ func NewProduct(name string, price float64) (*Product, error) {
 	return product, nil
 }
 
-func (u *Product) isValid(product *Product) bool {
+func (p *Product) isValid(product *Product) bool {
 	return product.Name != ""
 }

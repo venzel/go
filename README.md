@@ -4,13 +4,14 @@ Repositório destinado ao Go.
 
 ## Projetos
 
--   [Go ViaCEP](./projetcs/go-viacep/)
--   [Go clean architecture basic](./projetcs/go-clean-architecture-basic/)
--   [Go agorithms](./projetcs/go-algorithms/)
--   [Go encoder](./projetcs/go-encoder/)
--   [Go access modifiers](./projetcs/go-access-modiers/)
--   [Go configs dot env](./projetcs/go-configs-dot-env/)
--   [Go database](./projetcs/go-database/)
+-   [Go ViaCEP](./projects/go-viacep/)
+-   [Go clean architecture basic](./projects/go-clean-architecture-basic/)
+-   [Go agorithms](./projects/go-algorithms/)
+-   [Go access modifiers](./projects/go-access-modifiers/)
+-   [Go configs dot env](./projects/go-configs-dot-env/)
+-   [Go database](./projects/go-database/)
+-   [Go injections](./projects/go-injections/)
+-   [Go injections with Google wire](./projects/go-injections-with-google-wire/)
 
 ## Download, instalação e configuração
 
@@ -76,8 +77,11 @@ go get golang.org/x/crypto
 # Viper: variáveis de ambientes
 go get github.com/spf13/viper
 
-# SQLite
+# Driver do SQLite
 go get github.com/jinzhu/gorm/dialects/sqlite
+
+# Driver do Mysql
+go get -u github.com/go-sql-driver/mysql
 ```
 
 ## Ferramentas úteis

@@ -1,5 +1,12 @@
 # Go database
 
+## Pacotes
+
+```bash
+# Driver do Mysql
+go get -u github.com/go-sql-driver/mysql
+```
+
 ## Docker compose do Mysql e RabbitMQ
 
 ```yaml
