@@ -84,6 +84,10 @@ go get github.com/jinzhu/gorm/dialects/sqlite
 go get -u github.com/go-sql-driver/mysql
 ```
 
+## Técnicas
+
+-   [ ] Redundância de requisições HTTP
+
 ## Ferramentas úteis
 
 -   [Converte JSON to struct](https://mholt.github.io/json-to-go/)

@@ -1,6 +1,9 @@
 package product
 
-import "database/sql"
+import (
+	"database/sql"
+	"fmt"
+)
 
 type RepositoryInterface interface {
 	Create(product *Product) error
@@ -16,6 +19,8 @@ func NewProductRepository(db *sql.DB) *Repository {
 }
 
 func (r *Repository) Create(product *Product) error {
+	fmt.Println("Executou case de criação de produtos no repositório ok!")
+
 	return nil
 }
 
