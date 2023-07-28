@@ -9,13 +9,10 @@ import (
 func main() {
 	cfg, _ := configs.InitConfig(".")
 
+	fmt.Println(cfg.Validate())
+
 	fmt.Println(cfg.APIName)
-	fmt.Println(cfg.APIPort)
-	fmt.Println(cfg.DBHost)
-	fmt.Println(cfg.DBPort)
-	fmt.Println(cfg.DBUser)
-	fmt.Println(cfg.DBPassword)
-	fmt.Println(cfg.DBName)
+	fmt.Println(cfg.APIEnv)
 
 	typeApiPort := reflect.TypeOf(cfg.APIPort)
 

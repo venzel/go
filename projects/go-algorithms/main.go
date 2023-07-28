@@ -3,6 +3,7 @@ package main
 import "algo/src"
 
 func main() {
+	src.GetAssertion()
 	// src.ExecuteFuncWithMap("b")
 
 	// src.GenerateUUID()
@@ -40,5 +41,8 @@ func main() {
 	// client.Init()
 	// client.GetCEPWithNewClient()
 
-	src.GetRequestWithContext()
+	// src.GetRequestWithContext()
+
+	// order := src.NewOrder("Queijo", 1.25)
+	// fmt.Println(order)
 }

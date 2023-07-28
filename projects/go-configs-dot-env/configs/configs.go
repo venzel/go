@@ -1,6 +1,5 @@
 package configs
 
-/* import viper to configs */
 import (
 	"github.com/spf13/viper"
 )
@@ -8,6 +7,7 @@ import (
 type conf struct {
 	APIName    string `mapstructure:"API_NAME"`
 	APIPort    int    `mapstructure:"API_PORT"`
+	APIEnv     string `mapstructure:"API_ENV"`
 	DBHost     string `mapstructure:"DB_HOST"`
 	DBPort     int    `mapstructure:"DB_PORT"`
 	DBUser     string `mapstructure:"DB_USER"`
@@ -33,4 +33,14 @@ func InitConfig(path string) (*conf, error) {
 	}
 
 	return cfg, nil
+}
+
+func (c conf) Validate() bool {
+	var isValid bool = true
+
+	if c.APIName == "" {
+		isValid = false
+	}
+
+	return isValid
 }

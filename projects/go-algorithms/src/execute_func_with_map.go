@@ -5,26 +5,40 @@
 
 package src
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func ExecuteFuncWithMap(fn string) {
-	a := func(name string) {
-		fmt.Println("executou a ", name)
+type fnx func(name string)
+
+func a(name string) {
+	fmt.Println("a ->", name)
+}
+
+func b(name string, size int) {
+	fmt.Println("b ->", name, size)
+}
+
+func ExecuteFuncWithMap(fnName string) {
+	var fa, fb fnx
+
+	fa = func(name string) {
+		a(name)
 	}
 
-	b := func(name string) {
-		fmt.Println("executou b", name)
+	fb = func(name string) {
+		b(name, 30)
 	}
 
-	mapFunctions := map[string]interface{}{
-		"a": a,
-		"b": b,
+	mp := map[string]interface{}{
+		"a": fa,
+		"b": fb,
 	}
 
-	fx, exists := mapFunctions[fn]
+	fn, exists := mp[fnName]
 
 	if exists {
-		fx.(func(string))("Tiago")
+		fn.(fnx)("Tiago")
 	} else {
 		fmt.Println("função não encontrada")
 	}
