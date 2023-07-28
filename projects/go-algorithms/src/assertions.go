@@ -46,9 +46,9 @@ func GetAssertion() {
 		"fn":   nil,
 	}
 
-	var name interface{} = "Tiago"
-	var age interface{} = 20
-	var fn interface{} = fnx(func(name string, points int) {
+	name := interface{}("Tiago")
+	age := interface{}(20)
+	fn := interface{}(func(name string, points int) {
 		fmt.Println("fn ->", name, points)
 	})
 
