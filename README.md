@@ -13,6 +13,28 @@ Repositório destinado ao Go.
 -   [Go injections](./projects/go-injections/)
 -   [Go injections with Google wire](./projects/go-injections-with-google-wire/)
 
+## Vantagens
+
+-   Criada pelo Google, relativamente a pouco tempo (2012, primeira versão);
+-   Os envolvidos são pessoas criadoras do UNIX, UTF-8 e V8;
+-   Nasceu nativamente pensando em Multithreading e Paralelismo;
+-   Aproveita ao máximo os recursos de multicore;
+-   Ótima para detectar race condition;
+-   Open source;
+-   Expressiva, eficiênte, limpa e concisa;
+-   Bibliotecas de testes nativas;
+-   Linguagem copilada;
+-   Copilação rápida, o que faz parecer que é interpretada;
+-   Garbage collection eficiênte;
+-   Estaticamente tipada;
+-   Copilação em um único arquivo binário;
+-   Portável para Linux, Windows e Mac;
+-   Utiliza ponteiros com maestria;
+-   Sintaxe reduzida;
+-   Possui uma forma padrão de desenvolvimento do código;
+-   Pacotes maduros para se trabalhar com http;
+-   Proporciona um deploy simples;
+
 ## Download, instalação e configuração
 
 -   **Download oficial:** https://go.dev/dl/
@@ -83,10 +105,6 @@ go get github.com/jinzhu/gorm/dialects/sqlite
 # Driver do Mysql
 go get -u github.com/go-sql-driver/mysql
 ```
-
-## Técnicas
-
--   [ ] Redundância de requisições HTTP
 
 ## Ferramentas úteis
 
