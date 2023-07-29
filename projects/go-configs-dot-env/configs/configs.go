@@ -1,18 +1,23 @@
 package configs
 
 import (
+	"github.com/asaskevich/govalidator"
 	"github.com/spf13/viper"
 )
 
 type conf struct {
-	APIName    string `mapstructure:"API_NAME"`
-	APIPort    int    `mapstructure:"API_PORT"`
-	APIEnv     string `mapstructure:"API_ENV"`
-	DBHost     string `mapstructure:"DB_HOST"`
-	DBPort     int    `mapstructure:"DB_PORT"`
-	DBUser     string `mapstructure:"DB_USER"`
-	DBPassword string `mapstructure:"DB_PASS"`
-	DBName     string `mapstructure:"DB_NAME"`
+	APIName    string `mapstructure:"API_NAME" valid:"required"`
+	APIPort    int    `mapstructure:"API_PORT" valid:"required"`
+	APIEnv     string `mapstructure:"API_ENV" valid:"required"`
+	DBHost     string `mapstructure:"DB_HOST" valid:"required"`
+	DBPort     int    `mapstructure:"DB_PORT" valid:"required"`
+	DBUser     string `mapstructure:"DB_USER" valid:"required"`
+	DBPassword string `mapstructure:"DB_PASSWORD" valid:"required"`
+	DBName     string `mapstructure:"DB_NAME" valid:"required"`
+}
+
+func init() {
+	govalidator.SetFieldsRequiredByDefault(true)
 }
 
 func InitConfig(path string) (*conf, error) {
@@ -32,15 +37,19 @@ func InitConfig(path string) (*conf, error) {
 		panic(err)
 	}
 
+	if err := cfg.isValid(); err != nil {
+		panic(err)
+	}
+
 	return cfg, nil
 }
 
-func (c conf) Validate() bool {
-	var isValid bool = true
+func (c *conf) isValid() error {
+	_, err := govalidator.ValidateStruct(c)
 
-	if c.APIName == "" {
-		isValid = false
+	if err != nil {
+		return err
 	}
 
-	return isValid
+	return nil
 }

@@ -7,9 +7,11 @@ import (
 )
 
 func main() {
-	cfg, _ := configs.InitConfig(".")
+	cfg, err := configs.InitConfig(".")
 
-	fmt.Println(cfg.Validate())
+	if err != nil {
+		panic(err)
+	}
 
 	fmt.Println(cfg.APIName)
 	fmt.Println(cfg.APIEnv)
