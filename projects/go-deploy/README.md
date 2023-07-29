@@ -1,4 +1,4 @@
-# Go deploy
+# Go deploy with k8s
 
 ## Makefile
 
@@ -68,9 +68,80 @@ docker images | grep godeploy
 docker run --rm -p 3000:3000 venzel/godeploy
 ```
 
+## Subir o container no docker hub
+
+```bash
+# Vai pedir o user e o password
+docker login
+
+docker push venzel/godeploy:latest
+```
+
+## K8s
+
+## Download e instalação
+
+[Documentação](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+
+## Kind
+
+[Documentação](https://kind.sigs.k8s.io/)
+
+### Download e instalação do kind
+
+```bash
+# Versão corrente v0.20.0
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+
+chmod +x ./kind
+
+sudo mv ./kind /usr/local/bin/kind
+
+kind --version
+```
+
+### Criação de um cluster
+
+```bash
+kind create cluster --name=godeploy
+```
+
+### Comandos
+
+```bash
+# Informações do cluster
+kubectl cluster-info --context kind-godeploy
+
+# Verificar os nodes
+kubectl get nodes
+
+# Aplica
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+
+# Verifica os pods
+kubectl get pods
+
+# Verifica os services
+kubectl get svc
+
+# Reedirecionamento de portas
+kubectl port-forward svc/serversvc 3000:3000
+
+# Testa a API
+curl localhost:3000
+```
+
 <hr />
 
 <div>
   <img align="left" src="https://imgur.com/k8HFd0F.png" width=35 alt="Profile"/>
   <sub>Made with 💙 by <a href="https://github.com/venzel">Enéas Almeida</a></sub>
 </div>
+```
