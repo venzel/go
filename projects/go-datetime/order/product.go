@@ -19,7 +19,7 @@ func init() {
 	govalidator.SetFieldsRequiredByDefault(true)
 }
 
-func NewProduct(name, email string, price float64) (*Product, error) {
+func NewProduct(name string, price float64) (*Product, error) {
 	product := &Product{
 		Name: name,
 	}

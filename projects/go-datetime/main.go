@@ -12,7 +12,7 @@ func init() {
 }
 
 func main() {
-	product, _ := order.NewProduct("Leite", "tiago@gmail.com.br", 190.45)
+	product, _ := order.NewProduct("Picanha", 190.45)
 
 	fmt.Println(product)
 
@@ -25,9 +25,9 @@ func main() {
 	fmt.Println(now.Unix()) // Timestamps in seconds
 	fmt.Println(now.Format("02-01-2006 15:04:05"))
 
-	p1, _ := order.NewProduct("Leite", "tiago@gmail.com.br", 190.45)
-	p2, _ := order.NewProduct("Leite", "tiago@gmail.com.br", 190.45)
-	p3, _ := order.NewProduct("Leite", "tiago@gmail.com.br", 190.45)
+	p1, _ := order.NewProduct("Leite", 11.45)
+	p2, _ := order.NewProduct("Sabão", 3.45)
+	p3, _ := order.NewProduct("Café", 6.45)
 
 	products := order.Products{p1, p2, p3}
 
