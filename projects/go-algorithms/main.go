@@ -1,9 +1,16 @@
 package main
 
-import "algo/src"
+import (
+	"algo/src"
+	"fmt"
+)
 
 func main() {
-	src.GetAssertion()
+
+	sum := src.Calculate(10, 5, "sub")
+	fmt.Println(sum)
+
+	// src.GetAssertion()
 	// src.ExecuteFuncWithMap("b")
 
 	// src.GenerateUUID()
